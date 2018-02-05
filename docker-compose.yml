@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  omeka-s:
+    image: infolounge/omeka-s:latest
+    ports:
+      - 80:80
+    environment:
+      OMEKA_S_DB_NAME: name
+      OMEKA_S_DB_USER: user
+      OMEKA_S_DB_PASSWORD: password
+      OMEKA_S_DB_HOST: mysql
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: name
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+

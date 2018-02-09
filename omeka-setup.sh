@@ -10,6 +10,7 @@ if ! [ -e index.php -a -e bootstrap.php ]; then
 	echo "Omeka S copy to $PWD"
 	cp -R -v /tmp/omeka-s/* .
 	chown -R www-data .
+        chmod -R g+w .
 fi
 
 if [ -v OMEKA_S_DB_USER -a -v OMEKA_S_DB_PASSWORD -a -v OMEKA_S_DB_NAME -a -v OMEKA_S_DB_HOST ]; then

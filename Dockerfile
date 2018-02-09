@@ -11,8 +11,7 @@ RUN apt-get -qq update
 RUN apt-get -qq -y --no-install-recommends install \
     libxml2-dev \
     git \
-    gnupg \
-    zlibc
+    imagemagick
 
 # install node.js and npm
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \

@@ -36,10 +36,10 @@ Run the docker-compose up [-d] command in the same directory.
 ## Environment Variables
 When you start the infolounge/omeka-s image, you can set the configuration for connecting MySQL server. Only if all of these varaibles are propery set, config/database.ini is automaticaly configured. Otherwise, you should configure manualy after booting the container.
 
-- OMEKA_S_DB_HOST: MySQL DB Host
-- OMEKA_S_DB_NAME: MySQL DB Name
-- OMEKA_S_DB_USER: MySQL DB User
-- OMEKA_S_DB_PASSWORD: MySQL DB Password
+- `OMEKA_S_DB_HOST`: MySQL DB Host
+- `OMEKA_S_DB_NAME`: MySQL DB Name
+- `OMEKA_S_DB_USER`: MySQL DB User
+- `OMEKA_S_DB_PASSWORD`: MySQL DB Password
 
 ## Volumes
 For persistence, you can mount an arbitrary host directory to `/var/www/html` (document root) as a [data volume](https://docs.docker.com/storage/volumes/).

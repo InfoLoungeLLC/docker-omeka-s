@@ -34,7 +34,7 @@ services:
 Run the docker-compose up [-d] command in the same directory.
 
 ## Environment Variables
-When you start the infolounge/omeka-s image, you can set the configuration for connecting MySQL server. Only if all of these varaibles are propery set, config/database.ini is automaticaly configured. Otherwise, you should configure manualy after booting the container.
+When you start the `infolounge/omeka-s` image, you can set the configuration for connecting MySQL server. Only if all of these varaibles are propery set, config/database.ini is automaticaly configured. Otherwise, you should configure manualy after booting the container.
 
 - `OMEKA_S_DB_HOST`: MySQL DB Host
 - `OMEKA_S_DB_NAME`: MySQL DB Name

@@ -37,5 +37,8 @@ RUN a2enmod rewrite
 COPY omeka-setup.sh /usr/local/bin
 RUN chmod +x /usr/local/bin/omeka-setup.sh
 
+# additional php settings
+COPY php.ini /usr/local/etc/php
+
 ENTRYPOINT ["omeka-setup.sh"]
 CMD ["apache2-foreground"]

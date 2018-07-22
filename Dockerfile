@@ -13,7 +13,7 @@ RUN apt-get -qq -y --no-install-recommends install \
     git \
     imagemagick \
     gnupg \
-    zlib-dev
+    zlib-devel
 
 # install node.js and npm
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \

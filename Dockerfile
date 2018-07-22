@@ -1,8 +1,8 @@
-FROM php:7.1-apache
+FROM php:7.2-apache
 WORKDIR /var/www/html
 
 # Omeka S Version
-ENV OMEKA_S_VERSION v1.0.1
+ENV OMEKA_S_VERSION v1.1.1
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -11,7 +11,9 @@ RUN apt-get -qq update
 RUN apt-get -qq -y --no-install-recommends install \
     libxml2-dev \
     git \
-    imagemagick
+    imagemagick \
+    gnupg \
+    zlib1g-dev
 
 # install node.js and npm
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
@@ -19,7 +21,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     nodejs
 
 # install php modules
-RUN docker-php-ext-install -j$(nproc) pdo pdo_mysql xml
+RUN docker-php-ext-install -j$(nproc) pdo pdo_mysql xml zip
 
 # prepare omeka-s
 RUN mkdir -p /tmp/omeka-s \

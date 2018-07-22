@@ -19,7 +19,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     nodejs
 
 # install php modules
-RUN docker-php-ext-install -j$(nproc) pdo pdo_mysql xml
+RUN docker-php-ext-install -j$(nproc) pdo pdo_mysql xml zip
 
 # prepare omeka-s
 RUN mkdir -p /tmp/omeka-s \
